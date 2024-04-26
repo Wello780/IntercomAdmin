@@ -1,10 +1,10 @@
 --[[
-            |
-            |
-     | Welcome to the Intercom Admin source, feel free to take a look around.
-    | Enjoy.
-    |
-    |
+╭━╮╱╭╮╱╱╱╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╭━━━╮╱╭╮            |
+┃┃╰╮┃┃╱╱╱╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱╱╱┃╭━╮┃╱┃┃            |
+┃╭╮╰╯┣━━┳╮╭┳━━┫┃╭━━┳━━┳━━╮┃┃╱┃┣━╯┣╮╭┳┳━╮     | Welcome to the Intercom Admin source, feel free to take a look around.
+┃┃╰╮┃┃╭╮┃╰╯┃┃━┫┃┃┃━┫━━┫━━┫┃╰━╯┃╭╮┃╰╯┣┫╭╮╮    | Enjoy.
+┃┃╱┃┃┃╭╮┃┃┃┃┃━┫╰┫┃━╋━━┣━━┃┃╭━╮┃╰╯┃┃┃┃┃┃┃┃    |
+╰╯╱╰━┻╯╰┻┻┻┻━━┻━┻━━┻━━┻━━╯╰╯╱╰┻━━┻┻┻┻┻╯╰╯    |
 --]]
 
  -- Waits until game is loaded
@@ -17,12 +17,12 @@
  end
  
  -- Notification library
- local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/reed192512/INTERCOM-SCR/main/NotificationTest"))();
+ local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/FE/main/notificationtest"))();
  local Notify = Notification.Notify;
 
  Notify({
 		 Description = "Intercom Admin)";
-		 Title = "hello! Welcome to Intercom Admin / Programmed by reed192512";
+		 Title = "hello!";
 		 Duration = 10;
 		 
 });
@@ -60,7 +60,7 @@
  }
  
  -- [[ Version ]] -- 
- currentversion = 1.0.3
+ currentversion = 1.90
  
  --[[ VARIABLES ]]--
  PlaceId, JobId = game.PlaceId, game.JobId
@@ -629,11 +629,19 @@
  end)
  
  cmd.add({"executor"}, {"executor", "Very simple executor"}, function()
-	 loadstring(game:HttpGet("https://raw.githubusercontent.com/reed192512/INTERCOM-SCR/main/Executor"))()
+	 loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/FE/main/executor"))()
  end)
  
  cmd.add({"scripthub"}, {"scripthub", "Thanks to scriptblox api"}, function()
-	 loadstring(game:HttpGet("https://raw.githubusercontent.com/reed192512/INTERCOM-SCR/main/ScriptHubhttps://raw.githubusercontent.com/reed192512/INTERCOM-SCR/main/ScriptHub"))()
+ loadstring(game:HttpGet("https://gist.githubusercontent.com/Wello780/2b513636deaf78c35c76217b9cf187c2/raw/36e98f2ce84798e3a79e87c5fc0228a0c2111bec/gistfile1.txt"))()
+ wait();
+ 
+ Notify({
+ Description = "Luanched scripthub";
+ Title = "Intercom Admin";
+ Duration = 10;
+ 
+ });
  end)
  
  cmd.add({"stand"}, {"stand <player>", "Makes a player your stand"}, function(...)
@@ -746,7 +754,7 @@
  end)
  
  cmd.add({"plugins"}, {"plugins", "Check what kind of plugins you have, add plugins using a gui, delete a plugin."}, function()
-	 loadstring(game:HttpGet("https://raw.githubusercontent.com/reed192512/INTERCOM-SCR/main/IntercomAdminPlugin"))();
+	 loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/FE/main/NamelessAdminPlugin"))();
  end)
  
  cmd.add({"prefix"}, {"prefix <prefix>", "Changes the admin prefix"}, function(...)
@@ -796,7 +804,7 @@
 		 
 		 });
 	 else
- writefile("Intercom-Admin\\Prefix.txt", PrefixChange)
+ writefile("Intercom/-Admin\\Prefix.txt", PrefixChange)
  opt.prefix = PrefixChange
  Notify({
  Description = "Prefix saved to '" .. PrefixChange .. "'";
@@ -3413,7 +3421,7 @@ print(Time)
  
  cmd.add({"vr", "clovr", "vrscript", "fevr"}, {"vr (clovr, vrscript, fevr)", "FE VR SCRIPT AKA CLOVR"}, function()
 	-- [[ should be patched ]] --
- loadstring(game:HttpGet("https://raw.githubusercontent.com/reed192512/INTERCOM-SCR/main/CloVR"))();
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/FE/main/CloVR"))();
  end)
  
  cmd.add({"flash"}, {"flash <player>", "Flashes the targets screen"}, function(...)
@@ -9678,7 +9686,7 @@ getChar().HumanoidRootPart.CFrame = target.Character.Humanoid.RootPart.CFrame
 	 wait();
 	 
 	 Notify({
-	 Description = "https://discord.com/invite/sqAwjWx9DH |Programmed by reed192512";
+	 Description = "https://discord.com/invite/sqAwjWx9DH";
 	 Title = "Intercom Admin";
 	 Duration = 15;
 	 
@@ -14611,6 +14619,7 @@ end)
 	 end
  end)
  
+ 
  -- [[ PLUGIN LOADER ]] -- 
  local PluginsLoaded = 0
  PluginsErrored = 0
@@ -15146,7 +15155,7 @@ end
 	 textclickbutton:TweenSize(UDim2.new(0, 32, 0, 33), "Out", "Quint",1,true)
 	 textclickbutton:TweenPosition(UDim2.new(0.48909232, 0, 0, 0), "Out", "Quint",1,true)
 	 wait(0.4)
-	 textclickbutton.Text = "IN"
+	 textclickbutton.Text = "IA"
 	 textclickbutton.Active = true
  gui.draggable(textclickbutton)
  end
@@ -15160,5 +15169,6 @@ end
 
  --[[
 	End of the source code.
-	contact reed192512 he will kindly add  updates or give command ideas, that could be added.
---]]
+	Join the discord for updates or give command ideas, that could be added.
+	https://discord.com/invite/sqAwjWx9DH
+--]]]]
